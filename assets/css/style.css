@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+}
+
+.hero{
+    padding: 90px;
+    /* background-color: #1F76FE; */
+    background-image: url("../img/bg.png");
+    background-size: cover;
+    text-shadow: black;
+}
+
+.sub-title{
+    color: #157347;
+    font-size: 14px;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.profile{
+    background-color: #157347;
+    text-shadow: black;
+}
+
+.profile .profile-title{
+    font-size: 42px;
+}
+
+.card-satisfaction{
+    text-shadow: black;
+}
+
+.card-satisfaction-article{
+    background-image: url("../img/bg-card-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-satisfaction-gallery{
+    background-image: url("../img/bg-card-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #FFC064;
+}
+
+.card-contact{
+    border-radius: 25px;
+}
+
+input[type=text], input[type=email]{
+    outline: none;
+    border: 1px solid #DFE4F3;
+    background-color: #F8FAFE;
+    color: #F8FAE8;
+    font-size: 14px;
+}
+
+textarea{
+    resize: none;
+    border: 1px solid #DFE4F3;
+    background-color: #F8FAFE !important;
+}
+
+hr{
+    width: 50px;
+    height: 20px;
+    border: 3px solid green;
+}
+
+.footer{
+    border-top: 1px solid #ccc;
+}
