@@ -101,7 +101,9 @@
                                         <td><?= $data['nama_lengkap'] ?></td>
                                         <td><?= $data['jabatan'] ?></td>
                                         <td>
-                                            <img src="../assets/img/pemdes/<?= $data['photo'] ?>" alt="<?= $data['nama_lengkap'] ?>" class="img-fluid img-thumbnail" width="80">
+                                            <a href="#" data-toggle="modal" data-target="#photo<?= $data['id_pemerintahan_desa'] ?>">
+                                                <img src="../assets/img/pemdes/<?= $data['photo'] ?>" alt="<?= $data['nama_lengkap'] ?>" class="img-fluid img-thumbnail" width="80">
+                                            </a>
                                         </td>
                                         <td>
                                             <div class="btn-group">
@@ -111,6 +113,24 @@
                                         </td>
 
                                     </tr>
+                                    <!-- modal picture -->
+                                    <div class="modal fade" id="photo<?= $data['id_pemerintahan_desa'] ?>">
+                                        <div class="modal-dialog modal-sm">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img src="../assets/img/pemdes/<?= $data['photo'] ?>" alt="<?= $data['nama_lengkap'] ?>" class="img-fluid img-thumbnail">
+                                                </div>
+
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
                                     <!-- modal Edit -->
                                     <div class="modal fade" id="edit<?= $data['id_pemerintahan_desa'] ?>">
                                         <div class="modal-dialog modal-lg">
