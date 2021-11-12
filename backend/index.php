@@ -46,7 +46,7 @@ ob_start();
 
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+            <img class="animation__shake" src="../assets/img/logo/Himtika.png" alt="HIMTIKA" height="60" width="60">
         </div>
 
         <!-- Navbar -->
@@ -245,10 +245,10 @@ ob_start();
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+            <strong>Copyright &copy; 2021 <a href="http://himtika.cs.unsika.ac.id/">HIMTIKA</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.1.0
+                <b>Version</b> 1.0
             </div>
         </footer>
 
