@@ -127,7 +127,7 @@ ob_start();
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                    <a href="index?page=penduduk" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Penduduk</p>
                                     </a>
@@ -152,13 +152,13 @@ ob_start();
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="index?page=buat-berita" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Buat Berita</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="index?page=berita" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Lihat Berita</p>
                                     </a>
@@ -175,13 +175,13 @@ ob_start();
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="index?page=buat-galeri" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Buat Galeri</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="index?page=galeri" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Lihat Galeri</p>
                                     </a>
@@ -210,12 +210,6 @@ ob_start();
                             <a href="iframe.html" class="nav-link">
                                 <i class="nav-icon fas fa-gavel"></i>
                                 <p>Produk Hukum</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://adminlte.io/docs/3.1/" class="nav-link">
-                                <i class="nav-icon fas fa-users"></i>
-                                <p>User</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -316,6 +310,7 @@ ob_start();
             // Summernote
             $('#sejarah').summernote()
             $('#geografis').summernote()
+            $('#isi_berita').summernote()
         })
     </script>
     <script>
@@ -326,7 +321,24 @@ ob_start();
                 "autoWidth": false,
                 "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
             }).buttons().container().appendTo('#pemerintah-desa_wrapper .col-md-6:eq(0)');
-            $('#example2').DataTable({
+
+            $("#penduduk").DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#penduduk_wrapper .col-md-6:eq(0)');
+
+            $('#berita').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+            $('#galeri').DataTable({
                 "paging": true,
                 "lengthChange": false,
                 "searching": false,
