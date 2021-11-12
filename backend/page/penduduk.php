@@ -20,7 +20,23 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-
+                <?php if (isset($_SESSION['successAdd'])) { ?>
+                    <div class="alert alert-success">
+                        <?php echo $_SESSION['successAdd']; ?>
+                        <button type="button" class="close text-white" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <?php unset($_SESSION['successAdd']);
+                } else if (isset($_SESSION['failedAdd'])) { ?>
+                    <div class="alert alert-danger">
+                        <?php echo $_SESSION['failedAdd']; ?>
+                        <button type="button" class="close text-white" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <?php unset($_SESSION['failedAdd']);
+                } ?>
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex justify-content-between">
@@ -45,6 +61,7 @@
                                         <th rowspan="2" class="align-middle">Agama</th>
                                         <th rowspan="2" class="align-middle">Pekerjaan</th>
                                         <th rowspan="2" class="align-middle">Pendidikan</th>
+                                        <th rowspan="2" class="align-middle">Action</th>
                                     </tr>
                                     <tr>
                                         <th>RT</th>
@@ -53,7 +70,32 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    <?php
+                                    $query = mysqli_query($koneksi, "SELECT * FROM him_penduduk");
+                                    foreach ($query as $data) {
+                                    ?>
+                                        <tr>
+                                            <td><?= $data['nik'] ?></td>
+                                            <td><?= $data['nama_lengkap'] ?></td>
+                                            <td><?= $data['tempat_lahir'] . ", " . $data['tanggal_lahir'] ?></td>
+                                            <td><?= $data['umur'] ?></td>
+                                            <td><?= $data['jk'] ?></td>
+                                            <td><?= $data['rt'] ?></td>
+                                            <td><?= $data['rw'] ?></td>
+                                            <td><?= $data['dusun'] ?></td>
+                                            <td><?= $data['agama'] ?></td>
+                                            <td><?= $data['pekerjaan'] ?></td>
+                                            <td><?= $data['pendidikan'] ?></td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-warning">Edit</a>
+                                                    <a href="#" class="btn btn-danger">Delete</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
                                 </tbody>
                                 <tfoot>
                                     <tr>
@@ -66,6 +108,7 @@
                                         <th rowspan="2" class="align-middle">Agama</th>
                                         <th rowspan="2" class="align-middle">Pekerjaan</th>
                                         <th rowspan="2" class="align-middle">Pendidikan</th>
+                                        <th rowspan="2" class="align-middle">Action</th>
                                     </tr>
                                     <tr>
                                         <th>RT</th>
@@ -98,7 +141,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="index?page=pemerintah-desa-proses" method="POST">
+                <form action="index?page=penduduk-proses" method="POST">
                     <div class="form-group">
                         <label for="nik">NIK (Nomor Induk Karyawan) <span class="text-danger">*</span></label>
                         <input type="text" class="form-control form-control-border" name="nik" id="nik" placeholder="Masukkan NIK" autofocus required>
@@ -165,6 +208,7 @@
                             <option value="Protestan">Protestan</option>
                             <option value="Budha">Budha</option>
                             <option value="Hindu">Hindu</option>
+                            <option value="Lainnya">Lainnya</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -225,7 +269,7 @@
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Tambah Data</button>
+                <input type="submit" class="btn btn-primary" value="Tambah Data" name="tambah">
                 </form>
             </div>
         </div>
