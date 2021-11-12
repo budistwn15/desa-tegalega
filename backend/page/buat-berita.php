@@ -28,15 +28,7 @@
                         <?php
                         $now = date("Y-m-d");
                         ?>
-                        <form action="index?page=berita-proses" method="POST">
-                            <div class="form-group">
-                                <label for="penulis">Penulis</label>
-                                <input type="text" class="form-control form-control-border" name="penulis" id="penulis" value="" disabled>
-                            </div>
-                            <div class="form-group">
-                                <label for="tanggal">Tanggal</label>
-                                <input type="text" class="form-control form-control-border" name="tanggal" id="tanggal" value="<?= $now ?>" disabled>
-                            </div>
+                        <form action="index?page=berita-proses" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="judul_berita">Judul Berita</label>
                                 <input type="text" class="form-control form-control-border" name="judul_berita" id="judul_berita" placeholder="Masukkan Judul Berita" autofocus>
