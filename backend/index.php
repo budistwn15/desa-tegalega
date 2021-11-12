@@ -14,6 +14,10 @@ ob_start();
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../assets/plugins/fontawesome-free/css/all.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
@@ -117,7 +121,7 @@ ob_start();
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/boxed.html" class="nav-link">
+                                    <a href="index?page=pemerintahan-desa" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Pemerintahan Desa</p>
                                     </a>
@@ -290,6 +294,19 @@ ob_start();
     <script src="../assets/plugins/summernote/summernote-bs4.min.js"></script>
     <!-- overlayScrollbars -->
     <script src="../assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="../assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../assets/plugins/jszip/jszip.min.js"></script>
+    <script src="../assets/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="../assets/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="../assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="../assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="../assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     <!-- AdminLTE App -->
     <script src="../assets/js/adminlte.js"></script>
     <!-- AdminLTE for demo purposes -->
@@ -300,6 +317,25 @@ ob_start();
             $('#sejarah').summernote()
             $('#geografis').summernote()
         })
+    </script>
+    <script>
+        $(function() {
+            $("#pemerintah-desa").DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#pemerintah-desa_wrapper .col-md-6:eq(0)');
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
     </script>
 </body>
 

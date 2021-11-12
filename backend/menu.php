@@ -18,6 +18,12 @@ if (isset($_GET['page'])) {
         case 'geografis-proses':
             include "page/geografis-proses.php";
             break;
+        case 'pemerintahan-desa':
+            include "page/pemerintahan-desa.php";
+            break;
+        case 'pemerintahan-desa-proses':
+            include "page/pemerintahan-desa-proses.php";
+            break;
         default:
             echo "Maaf halaman tidak ditemukan";
             break;
