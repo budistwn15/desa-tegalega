@@ -18,16 +18,16 @@
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-            <?php if (isset($_SESSION['edit'])) { ?>
-                <div class="alert alert-success">
-                    <?php echo $_SESSION['edit']; ?>
-                    <button type="button" class="close text-white" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            <?php unset($_SESSION['edit']);
-            } ?>
             <div class="col-md-12">
+                <?php if (isset($_SESSION['edit'])) { ?>
+                    <div class="alert alert-success">
+                        <?php echo $_SESSION['edit']; ?>
+                        <button type="button" class="close text-white" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <?php unset($_SESSION['edit']);
+                } ?>
                 <div class="card card-primary">
                     <div class="card-header">
                         <h3 class="card-title">Input Geografis</h3>
