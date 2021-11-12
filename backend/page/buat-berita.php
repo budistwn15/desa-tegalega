@@ -31,7 +31,7 @@
                         <form action="index?page=berita-proses" method="POST">
                             <div class="form-group">
                                 <label for="penulis">Penulis</label>
-                                <input type="text" class="form-control form-control-border" name="penulis" id="penulis" disabled>
+                                <input type="text" class="form-control form-control-border" name="penulis" id="penulis" value="" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="tanggal">Tanggal</label>

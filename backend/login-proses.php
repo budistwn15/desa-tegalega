@@ -12,6 +12,7 @@ if (isset($_POST['login'])) {
     $data = mysqli_fetch_array($query);
 
     if (mysqli_num_rows($query) > 0) {
+        $_SESSION['id'] = $data['id_user'];
         $_SESSION['nama'] = $data['nama_lengkap'];
         $_SESSION['email'] = $data['email'];
         $_SESSION['successLogin'] = "Selamat datang di halaman Admin Pemerintah Desa Tegalega";
