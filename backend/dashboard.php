@@ -20,6 +20,19 @@
 <section class="content">
     <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
+        <div class="row my-3">
+            <div class="col-md-12">
+                <?php if (isset($_SESSION['successLogin'])) { ?>
+                    <div class="alert alert-success">
+                        <?php echo $_SESSION['successLogin']; ?>
+                        <button type="button" class="close text-white" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <?php unset($_SESSION['successLogin']);
+                } ?>
+            </div>
+        </div>
         <div class="row">
             <div class="col-lg-3 col-6">
                 <!-- small box -->

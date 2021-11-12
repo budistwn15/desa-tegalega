@@ -40,6 +40,10 @@ ob_start();
 <body class="hold-transition sidebar-mini layout-fixed">
     <?php
     session_start();
+    if ($_SESSION['email'] == "") {
+        $_SESSION['restricted'] = "Silahkan untuk login terlebih dahulu";
+        header("Location:login");
+    }
     include "../lib/koneksi.php";
     ?>
     <div class="wrapper">
@@ -225,7 +229,7 @@ ob_start();
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://adminlte.io/docs/3.1/" class="nav-link">
+                            <a href="#" data-toggle="modal" data-target="#logout" class="nav-link">
                                 <i class="nav-icon fas fa-sign-out-alt"></i>
                                 <p>Logout</p>
                             </a>
@@ -242,6 +246,25 @@ ob_start();
             <?php
             include "menu.php";
             ?>
+        </div>
+
+        <!-- modal Logout -->
+        <div class="modal fade" id="logout">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Apakah anda yakin ingin keluar? </h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <a href="logout.php" class="btn btn-danger">Logout</a>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
