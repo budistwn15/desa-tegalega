@@ -56,7 +56,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="produk-hukum">Produk Hukum</a>
+                            <a class="nav-link active" href="produk-hukum">Produk Hukum</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="berita">Berita</a>

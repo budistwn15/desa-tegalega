@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -36,7 +37,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Pemerintahan
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -89,7 +90,7 @@
                 if (mysqli_num_rows($query) > 0) {
                     foreach ($query as $data) {
                 ?>
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-4 mb-3" data-aos="zoom-in">
                             <div class="card text-center p-5 border-0">
                                 <img src="assets/img/profile.jpg" alt="">
                                 <p class="pemerintah-subtitle"><?= $data['jabatan'] ?></p>
@@ -120,6 +121,13 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
     </script>
 </body>
 

@@ -17,6 +17,7 @@ include "lib/koneksi.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -77,7 +78,7 @@ include "lib/koneksi.php";
     <section class="hero">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 m-auto py-5 mt-5 text-center">
+                <div class="col-md-8 m-auto py-5 mt-5 text-center" data-aos="fade-up">
                     <h5 class="mb-1 text-white">Selamat Datang di Website Resmi</h5>
                     <h2 class="display-5 mb-3 fw-bold text-white">Desa Tegalega Kec. Ciampel, Kab. Karawang</h2>
                     <p class="mb-4 text-white">Tegalega merupakan sebuah desa yang terletak di daerah kecamatan Ciampel,
@@ -92,7 +93,7 @@ include "lib/koneksi.php";
     <section class="layanan p-4" id="layanan">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 m-auto text-center py-5 mt-5">
+                <div class="col-md-8 m-auto text-center py-5 mt-5" data-aos="fade-up">
                     <h5 class="sub-title mb-3">MENUJU DESA MAJU</h5>
                     <h2 class="title mb-3">Desa Tegalega</h2>
                     <p class="mb-3">Melayani masyarakat secara cepat, akurat dan transparan adalah komitmen kami dalam
@@ -102,7 +103,7 @@ include "lib/koneksi.php";
                     </p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" data-aos="fade-right">
                 <div class="col-md-4">
                     <div class="card p-4 border-0 text-center shadow-sm">
                         <img src="assets/img/1x.png" class="img-fluid mb-2">
@@ -131,14 +132,14 @@ include "lib/koneksi.php";
     <section class="statistics py-3">
         <div class="container">
             <div class="row py-5 mt-5">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-right">
                     <h5 class="sub-title">Statistik</h5>
                     <h2 class="mb-3 title">Desa Dalam Data</h2>
                     <p class="mb-3">Sistem kami memungkinkan dalam melakukan pendataan secara tepat, akurat dan
                         akuntabel. Diolah oleh tim pendata Desa kami.</p>
                     <a href="statistik" class="btn btn-success">Lihat Statistik <i class="bi bi-arrow-right-short"></i></a>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8" data-aos="fade-left">
                     <h4 class="text-center">Data Pendidikan</h4>
                     <div class="card p-5 border-0">
                         <canvas id="pendidikanChart"></canvas>
@@ -150,7 +151,7 @@ include "lib/koneksi.php";
 
     <section class="profile mb-5">
         <div class="container">
-            <div class="row">
+            <div class="row" data-aos="fade-up">
                 <div class="col-md-8 py-3 my-4 m-auto text-center text-white">
                     <h2 class="profile-title mb-3">Mari Berkunjung Ke <br> Desa Tegalega</h2>
                     <p class="mb-3">Tegalega merupakan sebuah desa yang terletak di daerah kecamatan Ciampel, kabupaten
@@ -165,11 +166,11 @@ include "lib/koneksi.php";
         <div class="container">
             <div class="row">
                 <div class="col-md-8 m-auto py-5 text-center">
-                    <h2 class="title">Kabar dan Galeri Desa</h2>
+                    <h2 class="title" data-aos="fade-down">Kabar dan Galeri Desa</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-right">
                     <div class="card card-satisfaction card-satisfaction-article p-5 bg-primary text-white rounded">
                         <h3 class="mb-3">Kabar Desa</h3>
                         <p class="mb-3">Temukan informasi dan berita terkini dan up to date terkait desa kami.</p>
@@ -180,7 +181,7 @@ include "lib/koneksi.php";
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-left">
                     <div class="card card-satisfaction card-satisfaction-gallery p-5 text-white rounded">
                         <h3 class="mb-3">Galeri Desa</h3>
                         <p class="mb-3">Potret Desa Tegallega, kegiatan pemerintahan hingga kegiatan warga.</p>
@@ -198,7 +199,7 @@ include "lib/koneksi.php";
     <section class="contact py-5">
         <div class="container">
             <div class="row py-5 mt-5">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-right">
                     <h5 class="sub-title">Kontak Kami</h5>
                     <h2 class="mb-3 title">Lebih Dekat Dengan Desa Kami</h2>
                     <p class="mb-3">Silahkan untuk menghubungi kami melalui form yang ada di website ini apabila membutuhkan informasi</p>
@@ -207,7 +208,7 @@ include "lib/koneksi.php";
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31714.310093423777!2d107.34757324214833!3d-6.485068558527843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e690b7588ddcb5d%3A0x1b026bf60bf53c74!2sTegalega%2C%20Kec.%20Ciampel%2C%20Kabupaten%20Karawang%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1636636935202!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-left">
                     <div class="card border-0 card-contact mt-5">
                         <?php
                         if (isset($_POST['kirim'])) {
@@ -265,6 +266,13 @@ include "lib/koneksi.php";
     <!-- jQuery -->
     <script src="assets/plugins/jquery/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
     </script>
     <!-- ChartJS -->
     <script src="assets/js/Chart.js/Chart.min.js"></script>

@@ -21,6 +21,7 @@ if (isset($_GET['id'])) {
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
             <link rel="stylesheet" href="assets/css/style.css">
+            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         </head>
 
         <body>
@@ -67,7 +68,7 @@ if (isset($_GET['id'])) {
                                     <a class="nav-link" href="produk-hukum">Produk Hukum</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="berita">Berita</a>
+                                    <a class="nav-link active" href="berita">Berita</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="galeri">Galeri</a>
@@ -81,7 +82,7 @@ if (isset($_GET['id'])) {
             <section class="hero-berita">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 py-5 mt-5 text-white">
+                        <div class="col-md-12 py-5 mt-5 text-white" data-aos="fade-right">
                             <h2 class="display-5"><?= $data['judul_berita'] ?></h2>
                             <hr>
                             <p><?= $data['nama_lengkap'] . " - " . tgl_indo($data['tanggal'])  ?></p>
@@ -110,6 +111,13 @@ if (isset($_GET['id'])) {
             </section>
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+            </script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                });
             </script>
         </body>
 
