@@ -336,6 +336,7 @@ ob_start();
             $('#sejarah').summernote()
             $('#geografis').summernote()
             $('#isi_berita').summernote()
+            $('#administrasi').summernote()
         })
     </script>
     <script>
