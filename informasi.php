@@ -1,3 +1,27 @@
+<?php
+include "lib/koneksi.php";
+if (isset($_POST['kirim'])) {
+    $nama = htmlentities(htmlspecialchars(strip_tags(trim($_POST['nama']))));
+    $email = htmlentities(htmlspecialchars(strip_tags(trim($_POST['email']))));
+    $no_handphone = htmlentities(htmlspecialchars(strip_tags(trim($_POST['no_handphone']))));
+    $lembaga = htmlentities(htmlspecialchars(strip_tags(trim($_POST['lembaga']))));
+    $informasi = htmlentities(htmlspecialchars(strip_tags(trim($_POST['informasi']))));
+    $kepentingan = htmlentities(htmlspecialchars(strip_tags(trim($_POST['kepentingan']))));
+    $catatan = htmlentities(htmlspecialchars(strip_tags(trim($_POST['catatan']))));
+    $created_at = date("Y-m-d H:i:s");
+    $udated_at = $created_at;
+
+    $query = mysqli_query($koneksi, "INSERT INTO him_informasi VALUES(null, '$nama','$email','$no_handphone','$lembaga','$informasi','$kepentingan','$catatan','$created_at','$udated_at')");
+
+    if ($query) {
+        $success = "Data berhasil dikirim";
+        header("Location:informasi");
+    } else {
+        $failed = "Data gagal dikirim";
+        header("Location:informasi");
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,6 +121,17 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card p-4 border-0 shadow-sm border-top border-4 border-success">
+                        <?php
+                        if (isset($success)) {
+                        ?>
+                            <div class="alert alert-success">Data berhasil ditambahkan</div>
+                        <?php
+                        } else if (isset($failed)) {
+                        ?>
+                            <div class="alert alert-danger"><?= $failed ?></div>
+                        <?php
+                        }
+                        ?>
                         <h3 class="card-title">
                             Formulir Permohonan Informasi
                         </h3>
@@ -124,6 +159,7 @@
                             </div>
                             <input type="submit" name="kirim" value="Kirim" class="btn btn-primary">
                         </form>
+
                     </div>
                 </div>
             </div>
