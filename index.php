@@ -79,13 +79,13 @@
                     <p class="mb-4 text-white">Tegalega merupakan sebuah desa yang terletak di daerah kecamatan Ciampel,
                         kabupaten
                         Karawang, Provinsi Jawa Barat, Indonesia</p>
-                    <a href="#" class="btn btn-success">Explore Here <i class="bi bi-arrow-right-short"></i></a>
+                    <a href="#layanan" class="btn btn-success">Explore Here <i class="bi bi-arrow-right-short"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="layanan p-4">
+    <section class="layanan p-4" id="layanan">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 m-auto text-center py-5 mt-5">
@@ -103,44 +103,43 @@
                     <div class="card p-4 border-0 text-center shadow-sm">
                         <img src="assets/img/1x.png" class="img-fluid mb-2">
                         <h3 class="fw-bold">Profil</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sapiente, ea libero quis non
-                            architecto id possimus ad adipisci velit est qui autem facere excepturi. Vitae amet deleniti
-                            dicta modi!</p>
+                        <p>Tegalega merupakan sebuah desa yang terletak di daerah kecamatan Ciampel, kabupaten Karawang, Provinsi Jawa Barat, Indonesia</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card p-4 border-0 text-center shadow-sm">
                         <img src="assets/img/2x.png" class="img-fluid mb-2">
                         <h3 class="fw-bold">Layanan Publik</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sapiente, ea libero quis non
-                            architecto id possimus ad adipisci velit est qui autem facere excepturi. Vitae amet deleniti
-                            dicta modi!</p>
+                        <p>Temukan berbagai macam layanan yang ada di website kami. Terdapat 2 layanan diantaranya layanan administrasi dan layanan informasi</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card p-4 border-0 text-center shadow-sm">
                         <img src="assets/img/3x.png" class="img-fluid mb-2">
                         <h3 class="fw-bold">Kabar Desa</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sapiente, ea libero quis non
-                            architecto id possimus ad adipisci velit est qui autem facere excepturi. Vitae amet deleniti
-                            dicta modi!</p>
+                        <p>Jangan sampai ketinggal berita desa kami temukan informasi dan berita terkini dan up to date terkait desa kami.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="statistics py-5">
+    <section class="statistics py-3">
         <div class="container">
             <div class="row py-5 mt-5">
                 <div class="col-md-4">
                     <h5 class="sub-title">Statistik</h5>
-                    <h2 class="mb-3 title">Data Desa</h2>
+                    <h2 class="mb-3 title">Desa Dalam Data</h2>
                     <p class="mb-3">Sistem kami memungkinkan dalam melakukan pendataan secara tepat, akurat dan
                         akuntabel. Diolah oleh tim pendata Desa kami.</p>
-                    <a href="#" class="btn btn-success">Lihat Statistik <i class="bi bi-arrow-right-short"></i></a>
+                    <a href="statistik" class="btn btn-success">Lihat Statistik <i class="bi bi-arrow-right-short"></i></a>
                 </div>
-                <div class="col-md-8"></div>
+                <div class="col-md-8">
+                    <h4 class="text-center">Data Pendidikan</h4>
+                    <div class="card p-5 border-0">
+                        <canvas id="pendidikanChart"></canvas>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -169,12 +168,10 @@
                 <div class="col-md-6">
                     <div class="card card-satisfaction card-satisfaction-article p-5 bg-primary text-white rounded">
                         <h3 class="mb-3">Kabar Desa</h3>
-                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius tempore sequi,
-                            adipisci non fugit dolorum quas unde odio, velit dolores temporibus incidunt quia voluptatum
-                            accusantium, obcaecati consequatur et voluptatem voluptates!</p>
+                        <p class="mb-3">Temukan informasi dan berita terkini dan up to date terkait desa kami.</p>
                         <div class="row">
                             <div class="col-md-4">
-                                <a href="#" class="btn btn-dark">Learn More</a>
+                                <a href="berita" class="btn btn-dark">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -182,12 +179,10 @@
                 <div class="col-md-6">
                     <div class="card card-satisfaction card-satisfaction-gallery p-5 text-white rounded">
                         <h3 class="mb-3">Galeri Desa</h3>
-                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius tempore sequi,
-                            adipisci non fugit dolorum quas unde odio, velit dolores temporibus incidunt quia voluptatum
-                            accusantium, obcaecati consequatur et voluptatem voluptates!</p>
+                        <p class="mb-3">Potret Desa Tegallega, kegiatan pemerintahan hingga kegiatan warga.</p>
                         <div class="row">
                             <div class="col-md-4">
-                                <a href="#" class="btn btn-dark">Learn More</a>
+                                <a href="galeri" class="btn btn-dark">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -202,9 +197,7 @@
                 <div class="col-md-6">
                     <h5 class="sub-title">Kontak Kami</h5>
                     <h2 class="mb-3 title">Lebih Dekat Dengan Desa Kami</h2>
-                    <p class="mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias sit quis ipsa
-                        animi cupiditate nemo veniam modi porro assumenda tenetur velit placeat optio repellendus enim
-                        sed quas, eos minima iste?</p>
+                    <p class="mb-3">Silahkan untuk menghubungi kami melalui form yang ada di website ini apabila membutuhkan informasi</p>
 
                     <div class="ratio ratio-16x9">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31714.310093423777!2d107.34757324214833!3d-6.485068558527843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e690b7588ddcb5d%3A0x1b026bf60bf53c74!2sTegalega%2C%20Kec.%20Ciampel%2C%20Kabupaten%20Karawang%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1636636935202!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -249,7 +242,49 @@
         </div>
     </section>
 
+    <!-- jQuery -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <!-- ChartJS -->
+    <script src="assets/js/Chart.js/Chart.min.js"></script>
+    <script>
+        var ctx = document.getElementById("pendidikanChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: [
+                    <?php
+                    include "lib/koneksi.php";
+                    $pendidikan = mysqli_query($koneksi, "SELECT pendidikan FROM him_penduduk");
+                    foreach ($pendidikan as $data_pendidikan) {
+                        echo '"' . $data_pendidikan['pendidikan'] . '",';
+                    }
+                    ?>
+                ],
+                datasets: [{
+                    label: '',
+                    data: [
+                        <?php
+                        $jumlah_pendidikan = mysqli_query($koneksi, "SELECT COUNT(pendidikan) AS total FROM him_penduduk GROUP BY pendidikan");
+                        foreach ($jumlah_pendidikan as $jumlah) {
+                            echo $jumlah['total'] . ",";
+                        }
+                        ?>
+                    ],
+                    backgroundColor: [
+                        '#f56954',
+                        '#00a65a',
+                        '#f39c12'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+            }
+        });
     </script>
 </body>
 

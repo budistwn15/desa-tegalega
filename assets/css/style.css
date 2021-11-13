@@ -33,6 +33,15 @@ body{
     text-shadow: black;
 }
 
+.hero-statistik{
+    padding: 120px;
+    /* background-color: #1F76FE; */
+    background-image: url("../img/bg-statistik.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-shadow: black;
+}
+
 .pemerintah-subtitle{
     margin-top: 20px;
 }
