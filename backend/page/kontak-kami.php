@@ -91,6 +91,7 @@
                                 </thead>
                                 <tbody>
                                     <?php
+                                    $no = 1;
                                     $query = mysqli_query($koneksi, "SELECT * FROM him_kontak_kami");
                                     foreach ($query as $data) {
                                     ?>

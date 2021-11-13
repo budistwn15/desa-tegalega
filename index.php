@@ -1,3 +1,7 @@
+<?php
+include "lib/koneksi.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -205,25 +209,41 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card border-0 card-contact mt-5">
-                        <form action="#" method="post">
+                        <?php
+                        if (isset($_POST['kirim'])) {
+                            $nama = htmlentities(htmlspecialchars(strip_tags(trim($_POST['nama']))));
+                            $email = htmlentities(htmlspecialchars(strip_tags(trim($_POST['email']))));
+                            $no_handphone = htmlentities(htmlspecialchars(strip_tags(trim($_POST['no_handphone']))));
+                            $pesan = htmlentities(htmlspecialchars(strip_tags(trim($_POST['pesan']))));
+                            $created_at = date("Y-m-d H:i:s");
+                            $updated_at = $created_at;
+                            $query = mysqli_query($koneksi, "INSERT INTO him_kontak_kami VALUES(null, '$nama','$email','$no_handphone','$pesan','$created_at','$updated_at')");
+                            if ($query) {
+                                header("Location:index");
+                            } else {
+                                header("Location:index");
+                            }
+                        }
+                        ?>
+                        <form action="" method="post">
                             <div class="form-floating mb-4">
-                                <input type="text" name="nama_lengkap" class="form-control" id="nama" placeholder="nama">
+                                <input type="text" name="nama" class="form-control" id="nama" placeholder="nama" required>
                                 <label for="floatingInput">Nama Lengkap</label>
                             </div>
                             <div class="form-floating mb-4">
-                                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                                 <label for="floatingInput">Email address</label>
                             </div>
                             <div class="form-floating mb-4">
-                                <input type="text" name="no_handphone" class="form-control" id="floatingInput" placeholder="089912344321">
+                                <input type="text" name="no_handphone" class="form-control" id="floatingInput" placeholder="089912344321" required>
                                 <label for="floatingInput">Nomor Handphone</label>
                             </div>
                             <div class="form-floating mb-4">
-                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="pesan" style="height: 100px;"></textarea>
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="pesan" style="height: 100px;" required></textarea>
                                 <label for="floatingTextarea">Pesan</label>
                             </div>
                             <div class="mb-4">
-                                <input type="submit" value="Kirim" class="btn btn-dark shadow-sm">
+                                <input type="submit" name="kirim" value="Kirim" class="btn btn-dark shadow-sm">
                             </div>
                         </form>
                     </div>
@@ -255,7 +275,6 @@
             data: {
                 labels: [
                     <?php
-                    include "lib/koneksi.php";
                     $pendidikan = mysqli_query($koneksi, "SELECT pendidikan FROM him_penduduk");
                     foreach ($pendidikan as $data_pendidikan) {
                         echo '"' . $data_pendidikan['pendidikan'] . '",';
