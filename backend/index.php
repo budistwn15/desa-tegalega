@@ -311,6 +311,7 @@ ob_start();
     <script src="../assets/plugins/summernote/summernote-bs4.min.js"></script>
     <!-- overlayScrollbars -->
     <script src="../assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="../assets/js/pages/dashboard.js"></script>
     <!-- DataTables  & Plugins -->
     <script src="../assets/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="../assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -378,6 +379,194 @@ ob_start();
         $(function() {
             bsCustomFileInput.init();
         });
+    </script>
+    <!-- DonutChart Jenis Kelamin -->
+    <script>
+        var pieChartCanvas = $('#sales-chart-canvas').get(0).getContext('2d')
+        var pieData = {
+            labels: [
+                'Laki-Laki',
+                'Perempuan',
+            ],
+            datasets: [{
+                data: [
+                    <?php
+                    $jumlah_laki = mysqli_query($koneksi, "select * from him_penduduk where jk='L'");
+                    echo mysqli_num_rows($jumlah_laki); ?>,
+                    <?php $jumlah_perempuan = mysqli_query($koneksi, "select * from him_penduduk where jk='P'");
+                    echo mysqli_num_rows($jumlah_perempuan); ?>
+                ],
+                backgroundColor: ['#f56954', '#00a65a', '#f39c12']
+            }]
+        }
+        var pieOptions = {
+            legend: {
+                display: true
+            },
+            maintainAspectRatio: false,
+            responsive: true,
+        }
+        var pieChart = new Chart(pieChartCanvas, {
+            type: 'doughnut',
+            data: pieData,
+            options: pieOptions
+        })
+    </script>
+    <script>
+        $(function() {
+            /* ChartJS
+             * -------
+             * Here we will create a few charts using ChartJS
+             */
+
+            //-------------
+            //- DONUT CHART -
+            //-------------
+            // Get context with jQuery - using jQuery's .get() method.
+            var pekerjaanChartCanvas = $('#pekerjaanChart').get(0).getContext('2d')
+            var pekerjaanData = {
+                labels: [
+                    <?php
+                    $pekerjaan = mysqli_query($koneksi, "SELECT pekerjaan FROM him_penduduk");
+                    foreach ($pekerjaan as $data_pekerjaan) {
+                        echo '"' . $data_pekerjaan['pekerjaan'] . '",';
+                    }
+                    ?>
+                ],
+                datasets: [{
+                    data: [
+                        <?php
+                        $jumlah_pekerjaan = mysqli_query($koneksi, "SELECT COUNT(pekerjaan) AS total FROM him_penduduk GROUP BY pekerjaan");
+                        foreach ($jumlah_pekerjaan as $jumlah) {
+                            echo $jumlah['total'] . ",";
+                        }
+                        ?>
+                    ],
+                    backgroundColor: ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+                }]
+            }
+            var pekerjaanOptions = {
+                maintainAspectRatio: false,
+                responsive: true,
+            }
+            //Create pie or douhnut chart
+            // You can switch between pie and douhnut using the method below.
+            new Chart(pekerjaanChartCanvas, {
+                type: 'doughnut',
+                data: pekerjaanData,
+                options: pekerjaanOptions
+            })
+
+            //-------------
+            //- PIE CHART -
+            //-------------
+            // Get context with jQuery - using jQuery's .get() method.
+            var pendudukChartCanvas = $('#pendudukChart').get(0).getContext('2d')
+            var pendudukData = {
+                labels: [
+                    'Laki-Laki',
+                    'Perempuan'
+                ],
+                datasets: [{
+                    data: [
+                        <?php
+                        $jumlah_laki = mysqli_query($koneksi, "select * from him_penduduk where jk='L'");
+                        echo mysqli_num_rows($jumlah_laki);
+                        ?>,
+                        <?php
+                        $jumlah_perempuan = mysqli_query($koneksi, "select * from him_penduduk where jk='P'");
+                        echo mysqli_num_rows($jumlah_perempuan);
+                        ?>,
+                    ],
+                    backgroundColor: ['#f56954', '#00a65a'],
+                }]
+            }
+            var pendudukOptions = {
+                maintainAspectRatio: false,
+                responsive: true,
+            }
+            //Create pie or douhnut chart
+            // You can switch between pie and douhnut using the method below.
+            new Chart(pendudukChartCanvas, {
+                type: 'pie',
+                data: pendudukData,
+                options: pendudukOptions
+            })
+
+            //-------------
+            //- BAR CHART -
+            //-------------
+            var pendidikanChartCanvas = $('#pendidikanChart').get(0).getContext('2d')
+
+            var pendidikanData = {
+                labels: [
+                    <?php
+                    $pendidikan = mysqli_query($koneksi, "SELECT pendidikan FROM him_penduduk");
+                    foreach ($pendidikan as $data_pendidikan) {
+                        echo '"' . $data_pendidikan['pendidikan'] . '",';
+                    }
+                    ?>
+                ],
+                datasets: [{
+                    label: 'Data',
+                    data: [
+                        <?php
+                        $jumlah_pendidikan = mysqli_query($koneksi, "SELECT COUNT(pendidikan) AS total FROM him_penduduk GROUP BY pendidikan");
+                        foreach ($jumlah_pendidikan as $jumlah) {
+                            echo $jumlah['total'] . ",";
+                        }
+                        ?>
+                    ],
+                    backgroundColor: ['#f56954', '#00a65a'],
+                }]
+            }
+            var pendidikanOptions = {
+                maintainAspectRatio: false,
+                responsive: true,
+            }
+
+            new Chart(pendidikanChartCanvas, {
+                type: 'bar',
+                data: pendidikanData,
+                options: pendidikanOptions
+            })
+
+            // line
+            var lineChartCanvas = $('#lineChart').get(0).getContext('2d')
+
+            var lineData = {
+                labels: [
+                    <?php
+                    $agama = mysqli_query($koneksi, "SELECT agama FROM him_penduduk");
+                    foreach ($agama as $data_agama) {
+                        echo '"' . $data_agama['agama'] . '",';
+                    }
+                    ?>
+                ],
+                datasets: [{
+                    label: 'Data',
+                    data: [
+                        <?php
+                        $jumlah_agama = mysqli_query($koneksi, "SELECT COUNT(agama) AS total FROM him_penduduk GROUP BY agama");
+                        foreach ($jumlah_agama as $jumlah) {
+                            echo $jumlah['total'] . ",";
+                        }
+                        ?>
+                    ],
+                    backgroundColor: ['#f56954', '#00a65a'],
+                }]
+            }
+            var lineOptions = {
+                maintainAspectRatio: false,
+                responsive: true,
+            }
+
+            new Chart(lineChartCanvas, {
+                type: 'bar',
+                data: lineData,
+                options: lineOptions
+            })
+        })
     </script>
 </body>
 
