@@ -194,7 +194,7 @@ ob_start();
                         </li>
                         <li class="nav-header">Layanan</li>
                         <li class="nav-item">
-                            <a href="pages/calendar.html" class="nav-link">
+                            <a href="index?page=administrasi" class="nav-link">
                                 <i class="nav-icon far fa-file-alt"></i>
                                 <p>
                                     Administrasi
@@ -202,7 +202,7 @@ ob_start();
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/gallery.html" class="nav-link">
+                            <a href="index?page=informasi" class="nav-link">
                                 <i class="nav-icon fas fa-info"></i>
                                 <p>
                                     Informasi
@@ -211,19 +211,19 @@ ob_start();
                         </li>
                         <li class="nav-header">Lainnya</li>
                         <li class="nav-item">
-                            <a href="iframe.html" class="nav-link">
+                            <a href="index?page=produk-hukum" class="nav-link">
                                 <i class="nav-icon fas fa-gavel"></i>
                                 <p>Produk Hukum</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://adminlte.io/docs/3.1/" class="nav-link">
+                            <a href="index?page=kontak-kami" class="nav-link">
                                 <i class="nav-icon fas fa-address-book"></i>
                                 <p>Kontak Kami</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://adminlte.io/docs/3.1/" class="nav-link">
+                            <a href="index?page=profile" class="nav-link">
                                 <i class="nav-icon fas fa-id-badge"></i>
                                 <p>Profile</p>
                             </a>

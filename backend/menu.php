@@ -48,6 +48,33 @@ if (isset($_GET['page'])) {
         case 'galeri-proses':
             include "page/galeri-proses.php";
             break;
+        case 'administrasi':
+            include "page/administrasi.php";
+            break;
+        case 'administrasi-proses':
+            include "page/administrasi-proses.php";
+            break;
+        case 'informasi':
+            include "page/informasi.php";
+            break;
+        case 'informasi-proses':
+            include "page/informasi-proses.php";
+            break;
+        case 'produk-hukum':
+            include "page/produk-hukum.php";
+            break;
+        case 'produk-hukum-proses':
+            include "page/produk-hukum-proses.php";
+            break;
+        case 'kontak-kami':
+            include "page/kontak-kami.php";
+            break;
+        case 'kontak-kami-proses':
+            include "page/kontak-kami-proses.php";
+            break;
+        case 'profile':
+            include "page/profile.php";
+            break;
         default:
             echo "Maaf halaman tidak ditemukan";
             break;
