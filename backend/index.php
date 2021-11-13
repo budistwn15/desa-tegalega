@@ -77,7 +77,7 @@ ob_start();
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                <span class="brand-text font-weight-light text-center">Desa Tegalega</span>
+                <span class="brand-text font-weight-light text-center">Desa Tegallega</span>
             </a>
 
             <!-- Sidebar -->

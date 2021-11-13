@@ -76,7 +76,11 @@
                 <!-- small box -->
                 <div class="small-box bg-warning">
                     <div class="inner">
-                        <h3>44</h3>
+                        <?php
+                        $data_berita = mysqli_query($koneksi, "SELECT * FROM him_berita");
+                        $jumlah_berita = mysqli_num_rows($data_berita);
+                        ?>
+                        <h3><?= $jumlah_berita ?></h3>
 
                         <p>Berita</p>
                     </div>
@@ -91,7 +95,11 @@
                 <!-- small box -->
                 <div class="small-box bg-danger">
                     <div class="inner">
-                        <h3>65</h3>
+                        <?php
+                        $data_galeri = mysqli_query($koneksi, "SELECT * FROM him_galeri");
+                        $jumlah_galeri = mysqli_num_rows($data_galeri);
+                        ?>
+                        <h3><?= $jumlah_galeri ?></h3>
 
                         <p>Galeri</p>
                     </div>
@@ -108,7 +116,11 @@
                 <!-- small box -->
                 <div class="small-box bg-info">
                     <div class="inner">
-                        <h3>9</h3>
+                        <?php
+                        $data_administrasi = mysqli_query($koneksi, "SELECT * FROM him_administrasi");
+                        $jumlah_administrasi = mysqli_num_rows($data_administrasi);
+                        ?>
+                        <h3><?= $jumlah_administrasi ?></h3>
 
                         <p>Layanan Administrasi</p>
                     </div>
@@ -123,7 +135,11 @@
                 <!-- small box -->
                 <div class="small-box bg-success">
                     <div class="inner">
-                        <h3>5</h3>
+                        <?php
+                        $data_informasi = mysqli_query($koneksi, "SELECT * FROM him_informasi");
+                        $jumlah_informasi = mysqli_num_rows($data_informasi);
+                        ?>
+                        <h3><?= $jumlah_informasi ?></h3>
 
                         <p>Layanan Informasi</p>
                     </div>
@@ -138,7 +154,11 @@
                 <!-- small box -->
                 <div class="small-box bg-warning">
                     <div class="inner">
-                        <h3>44</h3>
+                        <?php
+                        $data_produk = mysqli_query($koneksi, "SELECT * FROM him_produk_hukum");
+                        $jumlah_produk = mysqli_num_rows($data_produk);
+                        ?>
+                        <h3><?= $jumlah_produk ?></h3>
 
                         <p>Produk Hukum</p>
                     </div>
@@ -153,9 +173,13 @@
                 <!-- small box -->
                 <div class="small-box bg-danger">
                     <div class="inner">
-                        <h3>65</h3>
+                        <?php
+                        $data_kontak = mysqli_query($koneksi, "SELECT * FROM him_kontak_kami");
+                        $jumlah_kontak = mysqli_num_rows($data_kontak);
+                        ?>
+                        <h3><?= $jumlah_kontak ?></h3>
 
-                        <p>Pengunjung</p>
+                        <p>Kontak Kami</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-signal"></i>
