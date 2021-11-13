@@ -1,0 +1,19 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/user/public_html/
+    - /bin/cp .htaccess $DEPLOYPATH
+    - /bin/cp administrasi.php $DEPLOYPATH
+    - /bin/cp berita.php $DEPLOYPATH
+    - /bin/cp detail-berita.php $DEPLOYPATH
+    - /bin/cp galeri.php $DEPLOYPATH
+    - /bin/cp geografis.php $DEPLOYPATH
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp informasi.php $DEPLOYPATH
+    - /bin/cp pemerintahan-desa.php $DEPLOYPATH
+    - /bin/cp produk-hukum.php $DEPLOYPATH
+    - /bin/cp sejarah.php $DEPLOYPATH
+    - /bin/cp statistik.php $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R backend $DEPLOYPATH
+    - /bin/cp -R lib $DEPLOYPATH
