@@ -16,6 +16,23 @@ body{
     text-shadow: black;
 }
 
+.hero-pemerintahan{
+    padding: 90px;
+    /* background-color: #1F76FE; */
+    background-image: url("../img/bg-pemerintahan.png");
+    background-size: cover;
+    text-shadow: black;
+}
+
+.pemerintah-subtitle{
+    margin-top: 20px;
+}
+
+.pemerintah-title{
+    margin-top: -15px;
+    font-size: 18px;
+    font-weight: bold;
+}
 .sub-title{
     color: #157347;
     font-size: 14px;

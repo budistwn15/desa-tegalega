@@ -20,7 +20,7 @@
     <section class="navbar-nav">
         <nav class="navbar navbar-expand-lg navbar-light bg-light p-4 shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="index.php">Tegalega</a>
+                <a class="navbar-brand" href="index">Tegalega</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -31,8 +31,8 @@
                                 Desa
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="sejarah.php">Sejarah</a></li>
-                                <li><a class="dropdown-item" href="geografis.php">Geografis</a></li>
+                                <li><a class="dropdown-item" href="sejarah">Sejarah</a></li>
+                                <li><a class="dropdown-item" href="geografis">Geografis</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -40,29 +40,29 @@
                                 Pemerintahan
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="pemerintahan-desa.php">Pemerintahan Desa</a></li>
+                                <li><a class="dropdown-item" href="pemerintahan-desa">Pemerintahan Desa</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="statistik.php">Statistik</a>
+                            <a class="nav-link" href="statistik">Statistik</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Layanan
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="administrasi.php">Administrasi</a></li>
-                                <li><a class="dropdown-item" href="informasi.php">Informasi</a></li>
+                                <li><a class="dropdown-item" href="administrasi">Administrasi</a></li>
+                                <li><a class="dropdown-item" href="informasi">Informasi</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="produk-hukum.php">Produk Hukum</a>
+                            <a class="nav-link" href="produk-hukum">Produk Hukum</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="berita.php">Berita</a>
+                            <a class="nav-link" href="berita">Berita</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="galeri.php">Galeri</a>
+                            <a class="nav-link" href="galeri">Galeri</a>
                         </li>
                     </ul>
                 </div>
