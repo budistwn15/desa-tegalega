@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tegalega merupakan sebuah desa yang terletak di daerah kecamatan Ciampel, kabupaten Karawang, Provinsi Jawa Barat, Indonesia">
+    <meta name="keywords" content="Desa Tegalega, Tegalega, Desa tegalega, Ciampel">
     <title>Pemerintah Desa Tegalega - Menuju Desa Maju</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
@@ -19,54 +20,49 @@
     <section class="navbar-nav">
         <nav class="navbar navbar-expand-lg navbar-light bg-light p-4 shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Tegalega</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="index.php">Tegalega</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Desa
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
-                                <li><a class="dropdown-item" href="geografis.html">Geografis</a></li>
+                                <li><a class="dropdown-item" href="sejarah.php">Sejarah</a></li>
+                                <li><a class="dropdown-item" href="geografis.php">Geografis</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Pemerintahan
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="pemerintahan-desa.html">Pemerintahan Desa</a></li>
+                                <li><a class="dropdown-item" href="pemerintahan-desa.php">Pemerintahan Desa</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="statistik.html">Statistik</a>
+                            <a class="nav-link" href="statistik.php">Statistik</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Layanan
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="administrasi.html">Administrasi</a></li>
-                                <li><a class="dropdown-item" href="informasi.html">Informasi</a></li>
+                                <li><a class="dropdown-item" href="administrasi.php">Administrasi</a></li>
+                                <li><a class="dropdown-item" href="informasi.php">Informasi</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="produk-hukum.html">Produk Hukum</a>
+                            <a class="nav-link" href="produk-hukum.php">Produk Hukum</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="berita.html">Berita</a>
+                            <a class="nav-link" href="berita.php">Berita</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="galeri.html">Galeri</a>
+                            <a class="nav-link" href="galeri.php">Galeri</a>
                         </li>
                     </ul>
                 </div>
@@ -211,32 +207,26 @@
                         sed quas, eos minima iste?</p>
 
                     <div class="ratio ratio-16x9">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31714.310093423777!2d107.34757324214833!3d-6.485068558527843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e690b7588ddcb5d%3A0x1b026bf60bf53c74!2sTegalega%2C%20Kec.%20Ciampel%2C%20Kabupaten%20Karawang%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1636636935202!5m2!1sid!2sid"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31714.310093423777!2d107.34757324214833!3d-6.485068558527843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e690b7588ddcb5d%3A0x1b026bf60bf53c74!2sTegalega%2C%20Kec.%20Ciampel%2C%20Kabupaten%20Karawang%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1636636935202!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="card border-0 card-contact mt-5">
                         <form action="#" method="post">
                             <div class="form-floating mb-4">
-                                <input type="text" name="nama_lengkap" class="form-control" id="nama"
-                                    placeholder="nama">
+                                <input type="text" name="nama_lengkap" class="form-control" id="nama" placeholder="nama">
                                 <label for="floatingInput">Nama Lengkap</label>
                             </div>
                             <div class="form-floating mb-4">
-                                <input type="email" name="email" class="form-control" id="floatingInput"
-                                    placeholder="name@example.com">
+                                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                                 <label for="floatingInput">Email address</label>
                             </div>
                             <div class="form-floating mb-4">
-                                <input type="text" name="no_handphone" class="form-control" id="floatingInput"
-                                    placeholder="089912344321">
+                                <input type="text" name="no_handphone" class="form-control" id="floatingInput" placeholder="089912344321">
                                 <label for="floatingInput">Nomor Handphone</label>
                             </div>
                             <div class="form-floating mb-4">
-                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
-                                    name="pesan" style="height: 100px;"></textarea>
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="pesan" style="height: 100px;"></textarea>
                                 <label for="floatingTextarea">Pesan</label>
                             </div>
                             <div class="mb-4">
@@ -259,8 +249,7 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 </body>
 
