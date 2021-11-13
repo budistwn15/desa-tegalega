@@ -140,14 +140,6 @@ ob_start();
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-chart-pie"></i>
-                                <p>
-                                    Statistik
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
                                     Berita
@@ -210,6 +202,12 @@ ob_start();
                             </a>
                         </li>
                         <li class="nav-header">Lainnya</li>
+                        <li class="nav-item">
+                            <a href="index?page=user" class="nav-link">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>Users</p>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="index?page=produk-hukum" class="nav-link">
                                 <i class="nav-icon fas fa-gavel"></i>
