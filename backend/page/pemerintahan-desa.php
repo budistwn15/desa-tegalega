@@ -175,51 +175,52 @@
                                             </div>
                                             <!-- /.modal-content -->
                                         </div>
-                                        <!-- modal Delete -->
-                                        <div class="modal fade" id="delete<?= $data['id_pemerintahan_desa'] ?>">
-                                            <div class="modal-dialog modal-sm">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h4 class="modal-title">Apakah anda yakin ingin menghapus data? </h4>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <form action="index?page=pemerintahan-desa-proses" method="post">
-                                                        <input type="hidden" name="id_pemerintahan_desa" value="<?= $data['id_pemerintahan_desa'] ?>">
-                                                        <div class="modal-footer justify-content-center">
-                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                            <button type="submit" name="delete" class="btn btn-danger">Delete</button>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                            <!-- /.modal-content -->
-                                        </div>
-                                        <!-- /.modal-dialog -->
                                     </div>
-
-                                <?php
-                                }
-                                ?>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Nama Lengkap</th>
-                                    <th>Jabatan</th>
-                                    <th>Photo Profile</th>
-                                    <th>Action</th>
-                                </tr>
-                            </tfoot>
-                        </table>
+                                    <!-- modal Delete -->
+                                    <div class="modal fade" id="delete<?= $data['id_pemerintahan_desa'] ?>">
+                                        <div class="modal-dialog modal-sm">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Apakah anda yakin ingin menghapus data? </h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <form action="index?page=pemerintahan-desa-proses" method="post">
+                                                    <input type="hidden" name="id_pemerintahan_desa" value="<?= $data['id_pemerintahan_desa'] ?>">
+                                                    <div class="modal-footer justify-content-center">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        <button type="submit" name="delete" class="btn btn-danger">Delete</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                    <!-- /.modal-dialog -->
                     </div>
-                    <!-- /.card-body -->
+
+                <?php
+                                }
+                ?>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Lengkap</th>
+                        <th>Jabatan</th>
+                        <th>Photo Profile</th>
+                        <th>Action</th>
+                    </tr>
+                </tfoot>
+                </table>
                 </div>
-                <!-- /.card -->
+                <!-- /.card-body -->
             </div>
-            <!-- /.col -->
+            <!-- /.card -->
         </div>
-        <!-- /.row -->
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
     </div>
     <!-- /.container-fluid -->
 </section>

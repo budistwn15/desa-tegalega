@@ -1,6 +1,5 @@
 <?php
 ob_start();
-include "../lib/koneksi.php";
 if (isset($_POST['edit'])) {
     session_start();
     $id_sejarah = htmlentities(htmlspecialchars(strip_tags(trim($_POST['id_sejarah']))));

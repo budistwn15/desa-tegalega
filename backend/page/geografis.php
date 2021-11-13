@@ -30,7 +30,7 @@
                 } ?>
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Input Geografis</h3>
+                        <h3 class="card-title">Edit Geografis</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -49,7 +49,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="geografis">Geografis</label>
-                                <textarea id="geografis" name="geografis" class="form-control" style="height: 100px;">
+                                <textarea id="geografis" name="geografis" class="form-control">
                                 <?= $geografis ?>
                             </textarea>
                             </div>
