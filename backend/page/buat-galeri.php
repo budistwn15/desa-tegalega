@@ -25,7 +25,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <form action="index?page=galeri-proses" method="POST">
+                        <form action="index?page=galeri-proses" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="judul_galeri">Judul Galeri</label>
                                 <input type="text" class="form-control form-control-border" name="judul_galeri" id="judul_galeri" placeholder="Masukkan Judul Galeri" autofocus>
