@@ -75,6 +75,9 @@ if (isset($_GET['page'])) {
         case 'profile':
             include "page/profile.php";
             break;
+        case 'profile-proses':
+            include "page/profile-proses.php";
+            break;
         default:
             echo "Maaf halaman tidak ditemukan";
             break;

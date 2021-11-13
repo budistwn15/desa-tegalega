@@ -48,6 +48,14 @@
                 </button>
             </div>
         <?php unset($_SESSION['successLogout']);
+        } else if (isset($_SESSION['successPassword'])) { ?>
+            <div class="alert alert-success">
+                <?php echo $_SESSION['successPassword']; ?>
+                <button type="button" class="close text-white" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <?php unset($_SESSION['successPassword']);
         } ?>
         <!-- /.login-logo -->
         <div class="card">
