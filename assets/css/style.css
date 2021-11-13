@@ -24,6 +24,15 @@ body{
     text-shadow: black;
 }
 
+.hero-berita{
+    padding: 90px;
+    /* background-color: #1F76FE; */
+    background-image: url("../img/bg-berita.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-shadow: black;
+}
+
 .pemerintah-subtitle{
     margin-top: 20px;
 }
@@ -95,4 +104,18 @@ hr{
 
 .footer{
     border-top: 1px solid #ccc;
+}
+
+/* Gallery */
+
+.card-galeri img {
+    opacity: 0.9;
+    cursor: pointer;
+    margin: 2rem;
+    width: 100%;
+}
+
+.card-galeri img:hover {
+    opacity: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
